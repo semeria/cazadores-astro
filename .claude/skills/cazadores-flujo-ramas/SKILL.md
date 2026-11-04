@@ -42,6 +42,8 @@ Termina aquí y espera la respuesta.
 - Pasa a master: `git switch master`.
 - Fusiona sin avance rápido para conservar el historial de la rama: `git merge --no-ff exp/<tema> -m "Fusiona exp/<tema>: <resumen>"`.
 - Verifica con `git log --oneline -3` y `bun run build` en `master`.
+- Sube `master` al remoto: `git push origin master`. Regla permanente del usuario: todo cambio que llega a `master` se envía a `https://github.com/semeria/cazadores-astro`.
+- Si el `push` falla, detente y muestra el error; no uses `--force` para resolverlo.
 - Elimina la rama experimental ya fusionada: `git branch -d exp/<tema>`. Es una regla permanente del usuario: todo plan que pasa a `master` deja su rama `exp/` borrada. Usa `-d` (que solo borra ramas totalmente fusionadas); nunca `-D` para una rama fusionada.
 - Si `git branch -d` se niega, detente y pregunta; no fuerces el borrado.
 
@@ -51,11 +53,12 @@ Termina aquí y espera la respuesta.
 
 ## Reglas
 - La aprobación debe venir del usuario en el chat, para ese cambio concreto. No generalices una aprobación anterior.
-- No hagas `push` hasta que el usuario lo pida. Mientras no exista remoto de GitHub, el flujo es solo local.
+- El remoto de referencia es `origin` = `https://github.com/semeria/cazadores-astro.git`. Solo `master` se sube; las ramas `exp/...` nunca se suben.
+- Nunca hagas `push --force` ni reemplaces el remoto sin confirmación explícita del usuario para esa acción concreta.
 - Si hay conflictos de fusión, detente, muestra los archivos en conflicto y pregunta antes de resolverlos.
 - No uses `--force`, `reset --hard` ni `branch -D` sin confirmación. El borrado de ramas ya fusionadas con `-d` sí está autorizado de forma permanente (paso 6).
 - No añadas atributos de coautoría a commits que no creaste tú.
 
-## Cuando exista GitHub
-- Primera subida: `git remote add origin <url>` y `git push -u origin master`, solo tras pedirlo.
-- Las ramas `exp/...` se suben solo si el usuario lo pide.
+## Remoto de GitHub
+- Ya configurado: `origin` apunta a `https://github.com/semeria/cazadores-astro.git` y `master` sigue ese remoto.
+- Las ramas `exp/...` no se suben.
