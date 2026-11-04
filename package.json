@@ -1,0 +1,19 @@
+{
+  "name": "cazadores-astro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.16.6",
+    "libphonenumber-js": "^1.13.15"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
