@@ -42,7 +42,8 @@ Termina aquí y espera la respuesta.
 - Pasa a master: `git switch master`.
 - Fusiona sin avance rápido para conservar el historial de la rama: `git merge --no-ff exp/<tema> -m "Fusiona exp/<tema>: <resumen>"`.
 - Verifica con `git log --oneline -3` y `bun run build` en `master`.
-- Conserva la rama `exp/<tema>`. Bórrala solo si el usuario lo pide.
+- Elimina la rama experimental ya fusionada: `git branch -d exp/<tema>`. Es una regla permanente del usuario: todo plan que pasa a `master` deja su rama `exp/` borrada. Usa `-d` (que solo borra ramas totalmente fusionadas); nunca `-D` para una rama fusionada.
+- Si `git branch -d` se niega, detente y pregunta; no fuerces el borrado.
 
 ## 7. Si el usuario rechaza o pide cambios
 - Rechazo: `git switch master` y no fusiones. La rama queda para consulta. Bórrala con `git branch -D` solo con confirmación explícita.
@@ -52,7 +53,7 @@ Termina aquí y espera la respuesta.
 - La aprobación debe venir del usuario en el chat, para ese cambio concreto. No generalices una aprobación anterior.
 - No hagas `push` hasta que el usuario lo pida. Mientras no exista remoto de GitHub, el flujo es solo local.
 - Si hay conflictos de fusión, detente, muestra los archivos en conflicto y pregunta antes de resolverlos.
-- No uses `--force`, `reset --hard` ni `branch -D` sin confirmación.
+- No uses `--force`, `reset --hard` ni `branch -D` sin confirmación. El borrado de ramas ya fusionadas con `-d` sí está autorizado de forma permanente (paso 6).
 - No añadas atributos de coautoría a commits que no creaste tú.
 
 ## Cuando exista GitHub
