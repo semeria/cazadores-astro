@@ -11,9 +11,9 @@
 ## Estructura de la página
 `src/pages/index.astro` incluye navegación principal, hero, manifiesto, metodología, cuatro pilares, diagnóstico, llamada a aplicar, máxima y pie de página. El documento declara `lang="es"`, título, descripción, metadatos Open Graph/Twitter y favicon.
 
-El footer agrupa marca, redes y datos institucionales en una cuadrícula con composición de tres columnas en escritorio, dos en tablet y una columna centrada en móvil. Los iconos de Facebook e Instagram enlazan a los perfiles `proyectocazadores1` y `proyectocazadores`, respectivamente. El enlace de WhatsApp conserva `href="#"` hasta recibir la URL o número de perfil correspondiente.
+El footer agrupa marca, redes y datos institucionales en una cuadrícula con composición de tres columnas en escritorio, dos en tablet y una columna centrada en móvil. Los iconos de Facebook e Instagram enlazan a los perfiles `proyectocazadores1` y `proyectocazadores`, respectivamente. El enlace de WhatsApp apunta a `https://wa.me/529983317385` y se abre en una nueva pestaña.
 
-El CTA “Aplicar a Cazadores” abre WhatsApp con un mensaje inicial y utiliza el destinatario configurado en `WHATSAPP_NUMBER`; mientras ese valor sea `PENDIENTE_NUMERO`, el CTA informa que el número está pendiente y no abre un destino inválido. El header incluye “Ingresar al portal”, que muestra un diálogo de confirmación antes de abrir `https://app.proyectocazadores.com` en una nueva pestaña.
+El CTA “Aplicar a Cazadores” abre WhatsApp con un mensaje inicial y utiliza el destinatario configurado en `WHATSAPP_NUMBER`; el valor actual es `+52 998 331 7385`; si queda vacío o sin dígitos, el CTA informa que el número está pendiente y no abre un destino inválido. El header incluye “Ingresar al portal”, que muestra un diálogo de confirmación antes de abrir `https://app.proyectocazadores.com` en una nueva pestaña.
 
 En anchos de hasta 1050 px, el header sustituye la navegación horizontal por un botón de menú y un panel desplegable con los enlaces internos y ambos CTA completos. Por encima de ese breakpoint conserva el diseño horizontal de escritorio.
 

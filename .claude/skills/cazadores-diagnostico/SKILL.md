@@ -23,7 +23,7 @@ description: Usar al editar el Diagnóstico Cazador: preguntas, opciones de resp
 
 ## Formulario y WhatsApp
 - El envío no guarda datos ni llama a un servicio. Solo arma un mensaje y abre `wa.me` con `WHATSAPP_NUMBER`.
-- Mientras `WHATSAPP_NUMBER` sea `"PENDIENTE_NUMERO"`, el formulario no abre nada y muestra el aviso de número pendiente. No cambies ese comportamiento sin que el usuario dé el número.
+- `WHATSAPP_NUMBER` es `"+52 998 331 7385"` (número de México indicado por el usuario). Si queda vacío o sin dígitos, el formulario no abre nada y muestra el aviso de número pendiente.
 - Nunca afirmes en la interfaz que los datos se envían o se almacenan.
 
 ## Pasos para un cambio
