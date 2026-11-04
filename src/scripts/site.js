@@ -93,7 +93,7 @@ document.querySelectorAll("[data-step]").forEach((e) => {
       a("[data-step-outcome]", t.outcome));
   });
 });
-const WHATSAPP_NUMBER = "PENDIENTE_NUMERO";
+const WHATSAPP_NUMBER = "+52 998 331 7385";
 const getWhatsAppDestination = () => WHATSAPP_NUMBER.replace(/\D/g, "");
 const applyWhatsAppLink = document.querySelector("[data-whatsapp-apply]");
 const applyWhatsAppStatus = document.querySelector("[data-whatsapp-apply-status]");
