@@ -34,6 +34,7 @@ Presentar la comunidad, su metodología de siete etapas y un diagnóstico intera
 - Prefiere las dependencias ya existentes y comprueba `package.json` antes de dar por disponible una librería.
 - Verifica cambios de compilación con `bun run build`; usa `bun run dev` o `bun run preview` para revisión visual cuando proceda.
 - Actualiza las instrucciones o documentación afectadas cuando cambie el uso del proyecto.
+- Flujo de ramas: cada plan se trabaja en `exp/<tema>` desde `master`; solo se fusiona a `master` con aprobación explícita del usuario y no se hace `push` sin pedirlo. Detalle en `.claude/skills/cazadores-flujo-ramas/SKILL.md`.
 
 # Qué nunca debe hacer un agente
 - No inventar backend, autenticación, base de datos, servicios externos ni infraestructura de despliegue que no estén presentes.
